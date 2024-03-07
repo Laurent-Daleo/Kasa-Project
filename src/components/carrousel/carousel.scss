@@ -3,7 +3,6 @@ $font-montserrat : "montserrat";
 
 .slider_container { 
     position: relative;
-    max-width: 1240px; 
     width: 100%; 
     height: 415px;
     margin-top: 50px;
@@ -29,10 +28,12 @@ $font-montserrat : "montserrat";
     width: 50px;
 }
 .backward{
-    left: 30px
+    left: 30px;
+    cursor: pointer;
 }
 .foward{
     right: 20px;
+    cursor: pointer;
 }
 .counter_slides{
     position: absolute;
