@@ -1,0 +1,50 @@
+$color-grey :#F6F6F6;
+$color-white:#ffffff;
+
+
+.cards_container {
+    max-width: 1240px;
+    width: 100%;
+    height: auto;
+    background: $color-grey;
+    border: none;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 56px;
+    margin-bottom: 50px;
+}
+@media screen and (max-width:1024px){
+    .cards_container{
+        max-width: 1024px;
+        padding: 50px 56px;
+    }
+}
+@media screen and (max-width:768px){
+    .cards_container{
+        max-width: 728px;
+        padding: 50px 56px;
+    }
+}
+@media screen and (max-width:426px){
+    .cards_container{
+        max-width: 425px;
+        background: $color-white;
+        padding: 0px;
+    }
+}
+@media screen and (max-width:376px){
+    .cards_container{
+        max-width: 335px;
+        background: $color-white;
+        padding: 0px;
+    }
+}
+@media screen and (max-width:320px){
+    .cards_container{
+        max-width: 300px;
+
+    }
+}

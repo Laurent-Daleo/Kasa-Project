@@ -1,0 +1,118 @@
+$color-white : #ffff;
+$font-montserrat : "montserrat";
+
+.slider_container { 
+    position: relative;
+    max-width: 1240px; 
+    width: 100%; 
+    height: 415px;
+    margin-top: 50px;
+}
+.slider_img img{
+    width: 100%; 
+    height: 415px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+.arrow_container{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+.backward,.foward{
+    top: 40%;
+    width: 50px;
+}
+.backward{
+    left: 30px
+}
+.foward{
+    right: 20px;
+}
+.counter_slides{
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    color: $color-white;
+    font-family: $font-montserrat;
+    font-size: 18px;
+    font-weight: 500;
+}
+@media screen and (max-width: 1240px){
+    .slider_container{
+        max-width: 1200px;
+    }
+
+}
+
+@media screen and (max-width: 1024px){
+    .slider_container{
+        max-width: 1004px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .slider_container{
+        max-width: 728px;
+    }
+    .arrow_container{
+        top: 50%;
+       img{
+        width: 24px;
+        height: 40px;
+    }
+      }
+      .backward,.foward{
+        width: 30px;
+      }
+}
+@media screen and (max-width: 426px){
+    .slider_container{
+        max-width: 385px;
+        height: 225px;
+
+    }
+    .slider_img img{
+        width: 385px;
+        height: 225px;
+    }
+    .arrow_container{
+        top: 45%;
+        padding: 0;
+    }
+    .backward img,.foward img{
+        width: 24px;
+        height: 24px;
+    }
+}
+@media screen and (max-width: 376px){
+    .slider_container{
+        max-width: 335px;
+        height: 225px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slider_img img{
+        width: 335px;
+        height: 225px;
+    }
+}
+@media screen and (max-width: 320px){
+    .slider_container{
+        max-width: 280px;
+        height: 225px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slider_img img{
+        width: 280px;
+        height: 225px;
+    }
+}

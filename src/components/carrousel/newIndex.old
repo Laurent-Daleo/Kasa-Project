@@ -1,0 +1,26 @@
+import React, {useState} from 'react'
+
+
+export default function Carrousel ({pictures}){
+
+    const [counter, setCounter] = useState(0)
+
+    /**
+     * 
+     */
+    const defineCurrentSlide = (newCurrent) => {
+        // Checker si newCurrent < 0 et si newCurrent > pictures.length - 1
+
+
+        setCurrent(newCurrent)
+    }
+
+    return (<>
+        {pictures.map((picture, index) => (
+            <div>
+                <button onClick={() => defineCurrentSlide(current - 1)}>Précédent</button>
+                {counter === index && <img src={picture} />}
+                <button onClick={() => defineCurrentSlide(current + 1)}>Précédent</button>            </div>
+        ))}
+    </>)
+}

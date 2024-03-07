@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap");
+
+$font-montserrat: "montserrat";
+$color-white: #ffff;
+$color-pink: #ff6060;
+$color-grey: #f6f6f6;
+$color-black: #000000;
+
+.dropdown-container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto 38px 0;
+}
+.dropdown {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(100% - 200px);
+    height: 52px;
+    margin-top: 38px;
+    padding: 10px;
+    background: $color-pink;
+    border: none;
+    border-radius: 5px;
+    color: $color-white;
+    font-family: $font-montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+.dropdown__content {
+  width: calc(100% - 200px);
+  height: auto;
+  padding: 20px;
+  color: $color-pink;
+  background: $color-grey;
+  border-radius: 5px;
+  transform: scaleY(0);
+  animation: down_info 0.2s linear;
+  animation-fill-mode: both;
+  transform-origin: top center;
+  color: $color-black;
+  font-family: $font-montserrat;
+  @keyframes down_info {
+    0% {
+      transform: scaleY(0);
+    }
+    50% {
+      transform: scaleY(0.5);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+}
+
+.drop_up {
+  animation: up_info 0.2s linear;
+  animation-fill-mode: both;
+  transform-origin: top center;
+  @keyframes up_info {
+    0% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0.5);
+    }
+    100% {
+      transform: scaleY(0);
+    }
+  }
+}
+
+.dropdown__title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: $font-montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 142%;
+}
+.dropdown__arrow {
+  position: absolute;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+}
+.active {
+  .dropdown__arrow {
+    animation: rotate_arrow 0.2s linear;
+    animation-fill-mode: forwards;
+    @keyframes rotate_arrow {
+      0% {
+        rotate: (0deg);
+      }
+      50% {
+        rotate: (-90deg);
+      }
+      100% {
+        rotate: (-180deg);
+      }
+    }
+  }
+}
+.inactive {
+  .dropdown__arrow {
+    animation: rotate_arrow_reverse 0.2s linear;
+    @keyframes rotate_arrow_reverse {
+      0% {
+        transform: rotate(-180deg);
+      }
+      50% {
+        transform: rotate(-90deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px) { // Ajout des unités px
+    .dropdown__btn {
+        width: calc(100% - 100px);
+    }
+    .dropdown__content {
+        width: calc(100% - 100px);
+    }
+}

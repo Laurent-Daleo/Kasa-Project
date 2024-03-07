@@ -1,0 +1,63 @@
+$font-montserrat : "montserrat";
+$color-white : #ffff;
+$color-pink : #FF6060;
+$color-black : #000000;
+
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 426px;
+$breakpoint-small-mobile: 376px;
+
+.navigation{
+    width: 309px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media screen and (max-width: $breakpoint-mobile){
+        width: 100%;
+    }
+
+    @media screen and (max-width: $breakpoint-small-mobile){
+        width: 190px;
+        height: 18px;
+    }
+}
+
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 57px;
+    justify-content: center;
+
+
+    @media screen and (max-width: $breakpoint-mobile){
+        gap: 26px;
+    }
+
+    .nav-link{
+        color: $color-pink;
+        font-family: $font-montserrat;
+        font-size: 24px;
+        color: $color-black;
+
+        &:hover{
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: $breakpoint-tablet){
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        @media screen and (max-width: $breakpoint-mobile){
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        @media screen and (max-width: $breakpoint-small-mobile){
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}

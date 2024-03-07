@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap");
+
+$font-montserrat: "montserrat";
+$color-white: #ffff;
+$color-pink: #ff6060;
+$color-grey: #f6f6f6;
+$color-black: #000000;
+
+.rental_infos_content {
+  position: relative;
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+  .title_rental {
+    font-family: $font-montserrat;
+    font-size: 36px;
+    color: $color-pink;
+    margin-top: 30px;
+  }
+  .title_container {
+    width: 100%;
+    height: auto;
+  }
+}
+.lessor_container {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .lessor_name {
+    text-align: right;
+    margin-right: 10px;
+    width: 93px;
+    height: 52px;
+    font-family: $font-montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    color: $color-pink;
+  }
+}
+.lessor_img_content {
+  .img_lessor {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+}
+.rating {
+  position: absolute;
+  top: 120px;
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  margin-bottom: 31px;
+}
+.place_title {
+  font-family: $font-montserrat;
+  font-size: 18px;
+  color: $color-black;
+}
+.place_infos_content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  .place_infos {
+    font-family: $font-montserrat;
+    color: $color-white;
+    font-size: 14px;
+    font-weight: 700;
+    max-width: max-content;
+    padding: 3px 30px;
+    height: 25px;
+    border-radius: 10px;
+    background: $color-pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+.infos_rental_container{
+  max-width: 1240px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 1fr;
+  column-gap: 76px;
+  margin-bottom: 50px;
+}
+.infos_rental{
+
+}
+
+.closed {
+  animation: up_info 0.2s linear;
+  animation-fill-mode: both;
+  transform-origin: top center;
+  @keyframes up_info {
+    0% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0.5);
+    }
+    100% {
+      transform: scaleY(0);
+    }
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .rental_infos_content {
+    max-width: 1200px;
+
+  }
+}
+@media screen and (max-width: 1024px) {
+  .rental_infos_content {
+    max-width: 1004px;
+    .title_rental {
+      font-size: 30px;
+    }
+  }
+  .rating{
+    top: 113px;
+
+  }
+}
+@media screen and (max-width: 768px) {
+  .rental_infos_content {
+    max-width: 748px;
+    .title_rental {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .place_title {
+    font-size: 14px;
+  }
+  .lessor_container {
+    width: 100%;
+    height: 44px;
+    top: 17px;
+    align-items: center;
+    .lessor_name {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+  .lessor_img_content {
+    .img_lessor {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+    }
+  }
+  .rating{
+    top: 86px;
+    img{
+        width: 22px;
+        height: 19px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 426px) {
+  .rental_infos_content {
+    max-width: 385px;
+    height: auto;
+    margin-left: 20px;
+    .title_container{
+        width: 335px;
+    }
+    .title_rental {
+      font-size: 18px;
+      font-weight: 500;
+      width: 335px;
+      height: 46px;
+    }
+  }
+  .place_infos_content {
+    width: 80%;
+    margin-bottom: 62px;
+    .place_infos {
+      width: 84px;
+      height: 18px;
+      font-size: 10px;
+      font-weight: 700;
+      p{
+        width: auto;
+        height: 14px;
+        text-align: center;
+      }
+    }
+  }
+
+  .counter_slides{
+    display: none;
+  }
+  .lessor_container {
+    top:165px ;
+    right: 0px;
+    width: 135px;
+    height: 44px;
+    align-items: center;
+    .lessor_name {
+      font-size: 12px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+  .lessor_img_content {
+    .img_lessor {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+  .rating{
+    width: 98px;
+    height: 18px;
+    top: 178px;
+    img{
+        width: 98px;
+        height: 18px;
+    }
+  }
+  .infos_rental_container{
+    position: relative;
+    max-width: 385px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    height: auto;
+  }
+  .infos_rental{
+    width: 100%;
+    height: auto;
+  }
+  @media screen and (max-width: 376px){
+    .rental_infos_content {
+      max-width: 335px;
+    }
+    
+  }
+  @media screen and (max-width: 320px){
+    .rental_infos_content {
+      max-width: 280px;
+      .title_rental{
+        font-size: 16px;
+        width: 280px;
+      }
+    }
+  }
+}
