@@ -38,6 +38,7 @@ export default function Carrousel({ pictures }) {
   return (
     <div className="slider_container">
       <div className="arrow_container">
+      {pictures.length > 1 && (
         <div className="backward">
           <img
             className="arrow_left"
@@ -46,6 +47,8 @@ export default function Carrousel({ pictures }) {
             onClick={() => onChangeCurrentSlide(direction.previous)}
           ></img>
         </div>
+        )}
+        {pictures.length > 1 && (
         <div className="foward">
           <img
             src={arrowRigth}
@@ -54,6 +57,7 @@ export default function Carrousel({ pictures }) {
             onClick={() => onChangeCurrentSlide(direction.next)}
           ></img>
         </div>
+        )}
       </div>
       {pictures.map((picture, index) => (
         <div className="slider_img" key={index}>
@@ -61,9 +65,11 @@ export default function Carrousel({ pictures }) {
         </div>
       ))}
 
+      {pictures.length > 1 && (
       <div className="counter_slides">
         {counter + 1}/{pictures.length}{" "}
       </div>
+      )}
     </div>
   );
 }

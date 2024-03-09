@@ -127,11 +127,11 @@ $color-black: #000000;
     }
   }
 }
-@media screen and (max-width: 425px) { // Ajout des unités px
+@media screen and (max-width: 426px) { // Ajout des unités px
     .dropdown__btn {
-        width: calc(100% - 100px);
+        width: 100%;
     }
     .dropdown__content {
-        width: calc(100% - 100px);
+        width: 100%;
     }
 }
