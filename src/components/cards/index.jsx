@@ -11,7 +11,6 @@ const Cards = () =>{
             return response.json()
         })
         .then(data => {
-            console.log(data);
             setJson(data);
         })
     }, []);
