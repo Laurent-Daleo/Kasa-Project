@@ -81,7 +81,7 @@ $color-white : #ffff;
         }
     }
     .linear_shadow{
-        width: 600px;
+        width: 6px;
         height: 255px;
     }
     .cards_title{
@@ -137,15 +137,15 @@ $color-white : #ffff;
 }
 @media screen and (max-width:320px){
     .cards{
-        width: 300px;
+        width: 285px;
         height: 255px;
         .card_cover{
-            width: 300px;
+            width: 285px;
             height: 255px;
         }
     }
     .linear_shadow{
-        width: 300px;
+        width: 285px;
         height: 255px;
     }
     .cards_title{
